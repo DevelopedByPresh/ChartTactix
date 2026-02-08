@@ -330,7 +330,7 @@ const books = [
 
 export default function PlansSection() {
   const [index, setIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState("mentorship");
+  const [activeTab] = useState("mentorship");
 
   const swipeConfidenceThreshold = 50;
 
@@ -416,7 +416,7 @@ export default function PlansSection() {
                   src={books[index].image}
                   drag="x"
                   dragConstraints={{ left: 0, right: 0 }}
-                  onDragEnd={(e, info) => {
+                  onDragEnd={(_, info) => {
                     if (info.offset.x < -swipeConfidenceThreshold) paginate(1);
                     else if (info.offset.x > swipeConfidenceThreshold) paginate(-1);
                   }}
