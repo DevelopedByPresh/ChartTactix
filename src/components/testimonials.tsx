@@ -10,7 +10,6 @@ import ts8 from "./images/ts8.png"
 import ts9 from "./images/ts9.png"
 import ts10 from "./images/ts10.png"
 import ts12 from "./images/ts12.png"
-import ts15 from "./images/ts15.png"
 import ts16 from "./images/ts16.jpeg"
 import ts17 from "./images/ts17.jpeg"
 import ts18 from "./images/ts18.jpeg"
@@ -33,7 +32,7 @@ import ts19 from "./images/ts19.jpeg"
 
 const images = [
   ts1, ts4,
-  ts6, ts8, ts9, ts10, ts12,ts15, ts16, ts17,ts18,ts19
+  ts6, ts8, ts9, ts10, ts12, ts16, ts17,ts18,ts19
 ]
 
 export default function Testimonials() {
@@ -52,7 +51,7 @@ export default function Testimonials() {
         <div className="flex justify-center mb-3">
         </div>
         <h2 className="text-3xl font-bold text-white">Clients Results</h2>
-        <p className="mt-3 text-sm text-white/60">
+        <p className="mt-3 text-sm text-white/60 p-5">
           Real testimonials and results from our successful clients.
         </p>
       </div>

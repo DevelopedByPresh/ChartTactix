@@ -3,13 +3,12 @@
 import { useState } from "react";
 import { motion, easeOut } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Book , GraduationCap  } from "lucide-react";
 import book1 from "./images/book.png";
-import mini from "./images/mini.png";
+
 import buy from "./images/buy.png";
 import register from "./images/register.png";
-import member from './images/member.png';
-import forex from './images/forex.png';
+
 import fire from "./images/fire.png";
 
 const fadeUp: Variants = {
@@ -44,9 +43,7 @@ export default function PlansSection() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <div className="flex justify-center items-center">
-            <img src={mini} alt="" />
-          </div>
+       
 
           <h2 className="text-3xl md:text-4xl font-bold mt-3">
             Available Plans
@@ -59,23 +56,24 @@ export default function PlansSection() {
           <div className="mt-6 inline-flex rounded-md overflow-hidden border border-white/10">
             <button
                  onClick={() => setActiveTab("books")}
-              className={`px-5 py-2 text-sm flex justify-center items-center gap-3 cursor-pointer ${
+              className={`px-5 py-2 text-sm font-semibold flex justify-center items-center gap-3 cursor-pointer ${
                 activeTab === "books"
                   ? "bg-[#A6FF00] text-black"
                   : "bg-[#0d0d0d] text-white/70"
               }`}
             >
-              <img src={forex} style={{ width: "20px", height: "20px" }} /> Forex e-book
+                 <Book style={{width:17}} /> Forex E-book
             </button>
             <button
                onClick={() => setActiveTab("mentorship")}
-              className={`px-5 py-1.5 text-sm flex justify-center items-center gap-3 cursor-pointer ${
+              className={`px-5 py-1.5 text-sm font-semibold flex justify-center items-center gap-3 cursor-pointer ${
                 activeTab === "mentorship"
                   ? "bg-[#A6FF00] text-black"
                   : "bg-[#0d0d0d] text-white/70"
               }`}
             >
-              <img src={member} style={{ width: "20px", height: "20px" }} /> Mentorship
+ 
+       <GraduationCap className="w-5 h-5" />  Mentorship
             </button>
           </div>
         </motion.div>
@@ -154,7 +152,7 @@ export default function PlansSection() {
 
             <hr />
 
-            <ul className="space-y-3 text-[12px] text-white/70 mt-5">
+            <ul className="space-y-3 text-[9px]  text-white/70 mt-5">
               {[
                 "Full Trading Course",
                 "Proven trading framework and strategy",

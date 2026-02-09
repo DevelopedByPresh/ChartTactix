@@ -1,5 +1,5 @@
 import { Instagram, Facebook, Youtube,  Send } from "lucide-react"
-import logo from "./images/mini.png" 
+
 
 export default function Footer() {
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
         {/* LOGO + SOCIALS */}
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center gap-2 mb-4">
-            <img src={logo} alt="ChartTactix" className="w-6 h-6" />
+    
             <span className="text-white font-semibold text-lg">
               Chart<span className="text-[#A6FF00]">Tactix</span>
             </span>
@@ -70,22 +70,29 @@ export default function Footer() {
 
 
           {/* QUICK LINKS */}
-          <div className="text-sm text-white/70 mb-10">
-            <span className="font-medium text-white mr-4">Quick Links</span>
-            <div className="flex flex-wrap justify-center gap-4 mt-3">
-              {["Home", "About Us", "Client Results", "Contact Us"].map(
-                (link) => (
-                  <a
-                    key={link}
-                    href=""
-                    className="hover:text-[#A6FF00] transition"
-                  >
-                    {link}
-                  </a>
-                )
-              )}
-            </div>
-          </div>
+       <div className="text-sm text-white/70 mb-10">
+  <span className="font-medium text-white mr-4">Quick Links</span>
+
+  <div className="flex flex-wrap justify-center gap-4 mt-3">
+    {[
+      { label: "Home", href: "#Home" },
+      { label: "About Us", href: "#about" },
+      { label: "Client Results", href: "#clientResults" },
+      { label: "Contact Us", href: "#contact" },
+    ].map(({ label, href }) => (
+      <a
+        key={label}
+        href={href}
+        className="hover:text-[#A6FF00] transition"
+      >
+        {label}
+      </a>
+    ))}
+  </div>
+</div>
+
+
+
         </div>
 
         {/* DIVIDER */}

@@ -84,29 +84,43 @@ export default function About() {
         </motion.div>
 
         {/* STATS */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4  border-white/10"
-        >
-          {[
-            { value: "6+", label: "Years Trading Experience" },
-            { value: "5k+", label: "Community Members" },
-            { value: "1k", label: "E-books Sold" },
-            { value: "2.5k+", label: "Combined Students" },
-          ].map((stat, i) => (
-            <motion.div
-              key={i}
-              variants={item}
-              className="py-10 flex flex-col items-center text-center  border-white/10 last:border-r-0"
-            >
-              <span className="text-3xl font-bold">{stat.value}</span>
-              <span className="mt-2 text-xs text-white/60">{stat.label}</span>
-            </motion.div>
-          ))}
-        </motion.div>
+  <motion.div
+  variants={container}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
+  className="mt-20 grid grid-cols-2 md:grid-cols-4 border-white/10"
+>
+  {[
+    { value: "6+", label: "Years Trading Experience" },
+    { value: "5k+", label: "Community Members" },
+    { value: "1k", label: "E-books Sold" },
+    { value: "2.5k+", label: "Combined Students" },
+  ].map((stat, i) => (
+    <motion.div
+      key={i}
+      variants={item}
+      className={`
+        py-10 flex flex-col items-center text-center border-white/10
+
+        /* Mobile vertical divider */
+        ${i % 2 === 0 ? "border-r" : ""}
+
+        /* Mobile horizontal divider (between rows) */
+        ${i < 2 ? "border-b" : ""}
+
+        /* Desktop vertical dividers */
+        md:border-b-0
+        md:border-r
+        md:last:border-r-0
+      `}
+    >
+      <span className="text-3xl font-bold">{stat.value}</span>
+      <span className="mt-2 text-xs text-white/60">{stat.label}</span>
+    </motion.div>
+  ))}
+</motion.div>
+
       </div>
     </section>
   );

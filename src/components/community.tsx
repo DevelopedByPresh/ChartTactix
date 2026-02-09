@@ -190,7 +190,7 @@ export default function Community() {
       border border-white/10
     "
   >
-    <img src={mini} alt="" className="w-6" />
+    <img src={mini} alt="" className="w-3" />
   </div>
 </div>
 

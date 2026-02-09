@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import img1 from "./images/img1.png";
 import img2 from "./images/img2.png";
 import img3 from "./images/img3.png";
-import img4 from "./images/img4.png"
+
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -43,11 +43,10 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
           {/* LOGO */}
       <div className="flex items-center justify-center">
-  <img
-    src={img4}
-    alt="Logo"
-   
-  />
+          <span className="text-white font-semibold text-lg">
+              Chart<span className="text-[#A6FF00]">Tactix</span>
+            </span>
+
 </div>
 
 
@@ -91,8 +90,9 @@ export default function Header() {
             {/* TOP BAR */}
             <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
               <div className="text-lg font-semibold">
-              <img src={img4}/>
-              </div>
+        <span className="text-white font-semibold text-lg">
+              Chart<span className="text-[#A6FF00]">Tactix</span>
+            </span>        </div>
               <button onClick={() => setOpen(false)}>
                 <X size={26} />
               </button>
@@ -100,20 +100,24 @@ export default function Header() {
 
             {/* LINKS */}
             <div className="flex-1 px-6 pt-10 space-y-6 text-lg">
-              <a href="#Home" className="block">Home</a>
-              <a href="#about" className="block">About us</a>
-              <a href="#clientResults" className="block">Client Results</a>
-              <a href="#contact" className="block">Contact Us</a>
+              <a href="#Home" className="block" onClick={() => setOpen(false)}>Home</a>
+              <a href="#about" className="block" onClick={() => setOpen(false)}>About us</a>
+              <a href="#clientResults" className="block" onClick={() => setOpen(false)} >Client Results</a>
+              <a href="#contact" className="block" onClick={() => setOpen(false)}>Contact Us</a>
             </div>
 
             {/* CTA BUTTONS */}
             <div className="px-6 pb-10 space-y-4">
                <a href="#books">
-              <button className="w-full bg-[#A6FF00] text-black font-medium py-3 rounded-md cursor-pointer">
+              <button className="w-full bg-[#A6FF00] text-black font-medium py-3 rounded-md cursor-pointer" onClick={() => setOpen(false)}>
                 Available Plans
               </button>
               </a>
-              <button className="w-full border border-white/30 py-3 mt-4 rounded-md cursor-pointer" onClick={() => window.open("https://t.me/ChartTactix", "_blank")}>
+              <button className="w-full border border-white/30 py-3 mt-4 rounded-md cursor-pointer" 
+               onClick={() => {
+            setOpen(false);
+            window.open("https://t.me/ChartTactix", "_blank");
+                       }}>
                 Join our Telegram
               </button>
             </div>
@@ -199,7 +203,7 @@ export default function Header() {
 </motion.div>
 
 
-        <h1 style={{color:'black'}}>hi</h1>
+        {/* <h1 style={{color:'black'}}>hi</h1> */}
   
 
     </section>
