@@ -10,9 +10,7 @@ import comm5 from "./images/comm5.png"
 import comm6 from "./images/comm6.png"
 import comm7 from "./images/comm7.png"
 import comm8 from "./images/comm8.png"
-import comm9 from "./images/comm1.png"
-import comm10 from "./images/comm5.png"
-import comm11 from "./images/comm2.png"
+
 
 
 const avatars = [
@@ -24,9 +22,8 @@ const avatars = [
   comm6,
   comm7,
   comm8,
-  comm9,
-  comm10,
-  comm11,
+
+ 
 
 ]
 
@@ -53,11 +50,13 @@ export default function Community() {
           </p>
 
           <div className="flex justify-center lg:justify-start gap-4" >
-            <button className="bg-[#A6FF00] text-black px-6 py-3 rounded-md font-medium text-sm cursor-pointer">
+            <a href="#books">
+            <button className="bg-[#A6FF00] text-black px-10 py-3 rounded-md font-medium text-[11px] whitespace-nowrap  cursor-pointer" >
               Available Plans
             </button>
+             </a>
 
-            <button className="border border-white/20 text-white px-6 py-3 rounded-md text-sm hover:bg-white/5 transition cursor-pointer">
+            <button className="border border-white/20 text-white px-10 py-3 rounded-md text-[11px] whitespace-nowrap hover:bg-white/5 transition cursor-pointer" onClick={() => window.open("https://t.me/ChartTactix", "_blank")}>
               Join our Telegram
             </button>
           </div>
@@ -65,6 +64,7 @@ export default function Community() {
 
 
      {/* RIGHT ORBIT VISUAL */}
+
 <div className="relative flex justify-center items-center w-full mt-18 lg:mt-0">
 
   {/* OUTER ORBIT */}
@@ -95,38 +95,36 @@ export default function Community() {
     transition={{ duration: 35, ease: "linear", repeat: Infinity }}
   />
 
-
-{/* AVATARS */}
-{[
-  { items: avatars.slice(0, Math.ceil(avatars.length / 2)), radius: 140, speed: 40 },
-  { items: avatars.slice(Math.ceil(avatars.length / 2)), radius: 100, speed: 30 },
-].map((orbit, orbitIndex) =>
-  orbit.items.map((img, i) => {
-    const angle = (i / orbit.items.length) * 360
+  {/* ===== OUTER ORBIT AVATARS (4) ===== */}
+  {avatars.slice(0, 4).map((img, i) => {
+    const angle = (i / 4) * 360
 
     return (
       <motion.div
-        key={`${orbitIndex}-${i}`}
+        key={`outer-${i}`}
         className="absolute"
         style={{ rotate: angle }}
         animate={{ rotate: angle + 360 }}
         transition={{
-          duration: orbit.speed,
+          duration: 40,
           ease: "linear",
           repeat: Infinity,
         }}
       >
-        {/* POSITION */}
         <div
-          style={{ transform: `translateY(-${orbit.radius}px)` }}
-          className="flex items-center justify-center"
+          className="
+            flex items-center justify-center
+            translate-y-[-110px]
+            sm:translate-y-[-130px]
+            md:translate-y-[-150px]
+          "
         >
           <img
             src={img}
             alt=""
             className="
-              w-9 h-9
-              sm:w-10 sm:h-10
+              w-5 h-5
+              sm:w-6 sm:h-6
               rounded-full
               object-cover
               border border-white/20
@@ -137,22 +135,67 @@ export default function Community() {
         </div>
       </motion.div>
     )
-  })
-)}
+  })}
 
+  {/* ===== INNER ORBIT AVATARS (4) ===== */}
+  {avatars.slice(4, 8).map((img, i) => {
+    const angle = (i / 4) * 360
+
+    return (
+      <motion.div
+        key={`inner-${i}`}
+        className="absolute"
+        style={{ rotate: angle }}
+        animate={{ rotate: angle - 360 }}
+        transition={{
+          duration: 30,
+          ease: "linear",
+          repeat: Infinity,
+        }}
+      >
+        <div
+          className="
+            flex items-center justify-center
+            translate-y-[-75px]
+            sm:translate-y-[-95px]
+            md:translate-y-[-110px]
+          "
+        >
+          <img
+            src={img}
+            alt=""
+            className="
+              w-5 h-5
+              sm:w-6 sm:h-6
+              rounded-full
+              object-cover
+              border border-white/20
+              bg-black
+              shadow-md
+            "
+          />
+        </div>
+      </motion.div>
+    )
+  })}
 
   {/* CENTER LOGO */}
-  <div className="
-    relative z-20
-    w-14 h-14
-    rounded-full
-    bg-[#0d0d0d]
-    flex items-center justify-center
-    border border-white/10
-  ">
+  <div
+    className="
+      relative z-20
+      w-14 h-14
+      rounded-full
+      bg-[#0d0d0d]
+      flex items-center justify-center
+      border border-white/10
+    "
+  >
     <img src={mini} alt="" className="w-6" />
   </div>
 </div>
+
+
+
 <h1 >hi</h1>
 
 

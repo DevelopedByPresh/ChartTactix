@@ -2,28 +2,38 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence, useAnimation } from "framer-motion"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
-import mini from "./images/mini.png"
 
 import ts1 from "./images/ts1.png"
-import ts2 from "./images/ts2.png"
-import ts3 from "./images/ts3.png"
 import ts4 from "./images/ts4.png"
-import ts5 from "./images/ts5.png"
 import ts6 from "./images/ts6.png"
-import ts7 from "./images/ts7.png"
 import ts8 from "./images/ts8.png"
 import ts9 from "./images/ts9.png"
 import ts10 from "./images/ts10.png"
-import ts11 from "./images/ts11.png"
 import ts12 from "./images/ts12.png"
-import ts13 from "./images/ts13.png"
-import ts14 from "./images/ts14.png"
 import ts15 from "./images/ts15.png"
+import ts16 from "./images/ts16.jpeg"
+import ts17 from "./images/ts17.jpeg"
+import ts18 from "./images/ts18.jpeg"
+import ts19 from "./images/ts19.jpeg"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const images = [
-  ts1, ts2, ts3, ts4, ts5,
-  ts6, ts7, ts8, ts9, ts10,
-  ts11, ts12, ts13, ts14, ts15,
+  ts1, ts4,
+  ts6, ts8, ts9, ts10, ts12,ts15, ts16, ts17,ts18,ts19
 ]
 
 export default function Testimonials() {
@@ -40,7 +50,6 @@ export default function Testimonials() {
       {/* TITLE */}
       <div className="text-center mb-16">
         <div className="flex justify-center mb-3">
-          <img src={mini} alt="" />
         </div>
         <h2 className="text-3xl font-bold text-white">Clients Results</h2>
         <p className="mt-3 text-sm text-white/60">

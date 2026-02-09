@@ -42,9 +42,14 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
           {/* LOGO */}
-          <div className="text-lg font-semibold tracking-tight">
-            <img src={img4}/>
-          </div>
+      <div className="flex items-center justify-center">
+  <img
+    src={img4}
+    alt="Logo"
+   
+  />
+</div>
+
 
           {/* DESKTOP LINKS */}
           <div className="hidden md:flex gap-8 text-sm text-white/70">
@@ -56,10 +61,12 @@ export default function Header() {
 
           {/* DESKTOP CTA */}
           <div className="hidden md:flex gap-3">
+               <a href="#books">
             <button className="bg-[#A6FF00] text-black text-sm font-medium px-4 py-2 rounded-md cursor-pointer">
               Available Plans
             </button>
-            <button className="border border-white/30 text-sm px-4 py-2 rounded-md cursor-pointer">
+            </a>
+            <button className="border border-white/30 text-sm px-4 py-2 rounded-md cursor-pointer" onClick={() => window.open("https://t.me/ChartTactix", "_blank")}>
               Join our Telegram
             </button>
           </div>
@@ -93,18 +100,20 @@ export default function Header() {
 
             {/* LINKS */}
             <div className="flex-1 px-6 pt-10 space-y-6 text-lg">
-              <a href="#" className="block">Home</a>
-              <a href="#" className="block">About us</a>
-              <a href="#" className="block">Client Results</a>
-              <a href="#" className="block">Contact Us</a>
+              <a href="#Home" className="block">Home</a>
+              <a href="#about" className="block">About us</a>
+              <a href="#clientResults" className="block">Client Results</a>
+              <a href="#contact" className="block">Contact Us</a>
             </div>
 
             {/* CTA BUTTONS */}
             <div className="px-6 pb-10 space-y-4">
+               <a href="#books">
               <button className="w-full bg-[#A6FF00] text-black font-medium py-3 rounded-md cursor-pointer">
                 Available Plans
               </button>
-              <button className="w-full border border-white/30 py-3 rounded-md cursor-pointer">
+              </a>
+              <button className="w-full border border-white/30 py-3 mt-4 rounded-md cursor-pointer" onClick={() => window.open("https://t.me/ChartTactix", "_blank")}>
                 Join our Telegram
               </button>
             </div>
@@ -131,10 +140,13 @@ export default function Header() {
 
        {/* HERO CTA */}
         <div className="mt-5 flex flex-col md:flex-row gap-4 md:gap-6 max-w-xs md:max-w-none mx-auto justify-center">
-          <button className="bg-[#A6FF00] text-black font-medium py-2.5 px-15 rounded-md cursor-pointer">
+
+            <a href="#books">
+          <button className="bg-[#A6FF00] text-black font-medium py-2.5 px-25 rounded-md cursor-pointer">
             Available Plans
           </button>
-          <button className="border border-white/30 py-2.5 px-15 rounded-md cursor-pointer">
+          </a>
+          <button className="border border-white/30 py-2.5 px-15 rounded-md cursor-pointer" onClick={() => window.open("https://t.me/ChartTactix", "_blank")}>
             Join our Telegram
           </button>
         </div>
@@ -157,37 +169,36 @@ export default function Header() {
       />
 
       {/* CHART IMAGES */}
-      <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        className="relative z-20 mt-10 px-6 flex justify-center "
-      >
-        <div className="relative w-full max-w-md md:max-w-5xl flex justify-center md:gap-6">
-          {/* MAIN CHART */}
-          <img
-            src={img2}
-            className="w-full md:w-[650px] rounded-xl shadow-2xl"
-          />
+<motion.div
+  initial={{ opacity: 0, y: 80 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1.2, ease: "easeOut" }}
+  className="relative z-20 mt-10 px-6 flex justify-center"
+>
+  <div className="relative w-full max-w-md md:max-w-5xl flex flex-col md:flex-row justify-center items-start">
+    {/* MAIN CHART */}
+    <img
+      src={img2}
+      className="w-full md:w-[650px] rounded-xl shadow-2xl"
+    />
 
-          {/* MOBILE OVERLAPPING CHART */}
-          <img
-            src={img3}
-            className="
-              absolute
-              bottom-[10px]
-              right-10
-              w-[80px]
-              rounded-xl
-              shadow-2xl
-              md:static md:w-[180px]
-                md:mt-8
-          
-            "
-          />
-        </div>
-      
-      </motion.div>
+    {/* SECOND CHART */}
+    <img
+      src={img3}
+      className="
+        absolute
+        bottom-[10px]
+        right-10
+        w-[80px]
+        rounded-xl
+        shadow-2xl
+        md:static md:w-[180px] md:ml-[-25px] md:mt-8
+      "
+    />
+  </div>
+</motion.div>
+
+
         <h1 style={{color:'black'}}>hi</h1>
   
 

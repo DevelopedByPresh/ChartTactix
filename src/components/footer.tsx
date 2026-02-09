@@ -1,4 +1,4 @@
-import { Instagram, Twitter, Facebook, Youtube, Send } from "lucide-react"
+import { Instagram, Facebook, Youtube,  Send } from "lucide-react"
 import logo from "./images/mini.png" 
 
 export default function Footer() {
@@ -20,31 +20,54 @@ export default function Footer() {
           </div>
 
           {/* SOCIAL ICONS */}
-          <div className="flex gap-4 mb-8">
-            {[
-              { icon: Instagram },
-              { icon: Twitter },
-              { icon: Facebook },
-              { icon: Youtube },
-              { icon: Send },
-            ].map((Item, i) => (
-              <a
-                key={i}
-                href="#"
-                className="
-                  w-9 h-9
-                  rounded-md
-                  bg-[#A6FF00]
-                  flex items-center justify-center
-                  text-black
-                  hover:scale-105
-                  transition
-                "
-              >
-                <Item.icon size={18} />
-              </a>
-            ))}
-          </div>
+
+<div className="flex gap-4 mb-8">
+  {[
+    { icon: Instagram, href: "https://www.instagram.com/chart__tactix?igsh=aXJvbTRoMXp4N2x1" }, 
+    {
+      icon: () => (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          width="16"
+          height="16"
+        >
+          <path d="M18.244 2H21.5l-7.1 8.115L22.5 22h-6.7l-5.25-6.87L4.5 22H1.244l7.6-8.69L1.5 2h6.8l4.75 6.27L18.244 2z"/>
+        </svg>
+      ),
+      href: "https://x.com/Chart__Tactix",
+    },
+    { icon: Facebook, href: "https://www.facebook.com/share/1GJk3AHaYE/" },
+    { icon: Youtube, href: "https://www.youtube.com/@ChartTactix" },
+    { icon: Send, href: "https://t.me/ChartTactix" },
+  ].map((Item, i) => (
+    <a
+      key={i}
+      href={Item.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        w-9 h-9
+        rounded-md
+        bg-[#A6FF00]
+        flex items-center justify-center
+        text-black
+        hover:scale-105
+        transition
+      "
+    >
+      {/* Type-safe rendering */}
+      {"icon" in Item && typeof Item.icon === "function" ? (
+        <Item.icon />
+      ) : (
+        // @ts-ignore
+        <Item.icon size={18} />
+      )}
+    </a>
+  ))}
+</div>
+
 
           {/* QUICK LINKS */}
           <div className="text-sm text-white/70 mb-10">
