@@ -3,11 +3,14 @@
 import { useState } from "react";
 import { motion, easeOut } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { Check, Book , GraduationCap  } from "lucide-react";
+import { Check,  } from "lucide-react";
 import book1 from "./images/book.png";
+import { FaGraduationCap } from "react-icons/fa6";
+import { FaCartPlus } from "react-icons/fa6";
+import { FaBook } from "react-icons/fa";
 
-import buy from "./images/buy.png";
-import register from "./images/register.png";
+
+
 
 import fire from "./images/fire.png";
 
@@ -62,7 +65,7 @@ export default function PlansSection() {
                   : "bg-[#0d0d0d] text-white/70"
               }`}
             >
-                 <Book style={{width:17}} /> Forex E-book
+                 <FaBook  size={16}/>  Forex E-book
             </button>
             <button
                onClick={() => setActiveTab("mentorship")}
@@ -73,7 +76,9 @@ export default function PlansSection() {
               }`}
             >
  
-       <GraduationCap className="w-5 h-5" />  Mentorship
+       <FaGraduationCap size={20}/>  Mentorship
+   
+
             </button>
           </div>
         </motion.div>
@@ -115,12 +120,12 @@ export default function PlansSection() {
 
             {/* FOOTER */}
             <div className="flex justify-between items-center mt-auto pt-6">
-              <span className="text-[15px] font-semibold pr-25">{books[index].title}</span>
+              <span className="text-[14px] font-semibold pr-25">{books[index].title}</span>
               <span className="text-2xl font-semibold text-[#A6FF00]">{books[index].price}</span>
             </div>
 
             <button className="w-full bg-[#A6FF00] flex justify-center items-center gap-3 text-black py-1.5 rounded-md font-medium mt-5 cursor-pointer" onClick={() => window.open("https://gumroad.com/checkout", "_blank")}>
-              <img src={buy} /> Buy
+            <FaCartPlus style={{width:20}} />  Buy
             </button>
           </motion.div>
 
@@ -140,7 +145,7 @@ export default function PlansSection() {
             </span>
 
             <h3 className="text-sm font-medium mb-4 leading-snug">
-              Premium Mentorship <br /> Course
+              ChartTactix Academy
             </h3>
 
             <div className="text-3xl font-bold text-[#A6FF00] mb-5">
@@ -152,7 +157,7 @@ export default function PlansSection() {
 
             <hr />
 
-            <ul className="space-y-3 text-[9px]  text-white/70 mt-5">
+            <ul className="space-y-3 text-[10px]  text-white/70 mt-5">
               {[
                 "Full Trading Course",
                 "Proven trading framework and strategy",
@@ -172,7 +177,7 @@ export default function PlansSection() {
             </ul>
 
             <button className="w-full bg-[#A6FF00] flex justify-center items-center gap-3 text-black py-1.5 rounded-md font-medium mt-auto cursor-pointer"   onClick={() => window.open("https://whop.com/checkout/plan_8XFBu7La7dXlZ", "_blank")}>
-              <img src={register} /> Register Now
+              <FaGraduationCap style={{width:20}} />  Register Now
             </button>
 
 

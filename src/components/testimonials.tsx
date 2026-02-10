@@ -8,12 +8,12 @@ import ts4 from "./images/ts4.png"
 import ts6 from "./images/ts6.png"
 import ts8 from "./images/ts8.png"
 import ts9 from "./images/ts9.png"
-import ts10 from "./images/ts10.png"
-import ts12 from "./images/ts12.png"
-import ts16 from "./images/ts16.jpeg"
-import ts17 from "./images/ts17.jpeg"
-import ts18 from "./images/ts18.jpeg"
-import ts19 from "./images/ts19.jpeg"
+import sm1 from "./images/sm1.png"
+import sm2 from "./images/sm2.png"
+import sm3 from "./images/sm3.png"
+import sm4 from "./images/sm4.png"
+import sm5 from "./images/sm5.png"
+
 
 
 
@@ -32,7 +32,7 @@ import ts19 from "./images/ts19.jpeg"
 
 const images = [
   ts1, ts4,
-  ts6, ts8, ts9, ts10, ts12, ts16, ts17,ts18,ts19
+  ts6, ts8, ts9,sm1, sm2,sm3,sm4,sm5
 ]
 
 export default function Testimonials() {
