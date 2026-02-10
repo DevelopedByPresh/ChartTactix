@@ -95,6 +95,74 @@ export default function Footer() {
 
         </div>
 
+
+
+     {/* NEWSLETTER */}
+<div className="mt-12 w-full max-w-md mx-auto text-center">
+  <h4 className="text-white font-medium mb-2">
+    Subscribe to our Newsletter
+  </h4>
+  <p className="text-sm text-white/60 mb-4">
+    Get market insights, updates, and new releases straight to your inbox.
+  </p>
+
+  <form
+    noValidate
+    className="flex flex-col sm:flex-row gap-2"
+  >
+    <input
+      type="email"
+      name="EMAIL"
+      required
+      placeholder="Enter your email"
+      className="
+        flex-1
+        px-4 py-2
+        rounded-md
+        bg-white/10
+        border border-white/20
+        text-white
+        placeholder-white/50
+        focus:outline-none
+        focus:border-[#A6FF00]
+      "
+    />
+
+    {/* Honeypot (spam protection) */}
+    <input
+      type="text"
+      name="b_xxxxx_xxxxx"
+      tabIndex={-1}      
+      className="hidden"
+      autoComplete="off"   
+    />
+
+    <button
+      className="
+        px-6 py-2
+        bg-[#A6FF00]
+        text-black
+        cursor-pointer
+        rounded-md
+        hover:opacity-90
+        transition
+        w-full sm:w-auto
+      "
+    >
+      Subscribe
+    </button>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
         {/* DIVIDER */}
         <div className="border-t border-white/10 my-10" />
 
