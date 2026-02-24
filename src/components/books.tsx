@@ -24,7 +24,7 @@ const fadeUp: Variants = {
 };
 
 const books = [
-  { title: "The Smart Money Secrets (Vol 1)", price: "$30", image: book1 },
+  { title: "The Smart Money Secrets (Vol 1)", price: "$50", image: book1 },
   { title: "Market Structure Blueprint", price: "$25", image: book1 },
   { title: "Liquidity & Order Flow", price: "$40", image: book1 },
 ];
