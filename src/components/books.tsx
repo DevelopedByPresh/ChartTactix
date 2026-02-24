@@ -24,7 +24,7 @@ const fadeUp: Variants = {
 };
 
 const books = [
-  { title: "The Smart Money Secrets (Vol 1)", price: "$50", image: book1 },
+  { title: "The Smart Money Secrets (Vol 1)", price: "$30", image: book1 },
   { title: "Market Structure Blueprint", price: "$25", image: book1 },
   { title: "Liquidity & Order Flow", price: "$40", image: book1 },
 ];
@@ -149,9 +149,9 @@ export default function PlansSection() {
             </h3>
 
             <div className="text-3xl font-bold text-[#A6FF00] mb-5">
-              $300{" "}
+              $500{" "}
               <span className="text-xs text-white/50 font-normal">
-                One-Time Payment
+                Billed Annually
               </span>
             </div>
 
