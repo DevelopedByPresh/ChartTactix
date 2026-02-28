@@ -124,7 +124,7 @@ export default function PlansSection() {
               <span className="text-2xl font-semibold text-[#A6FF00]">{books[index].price}</span>
             </div>
 
-         <a href="https://gumroad.com/checkout?_gl=1*1bg0fdx*_ga*MzE2NDY3ODAyLjE3NzA2NTMwNzM.*_ga_6LJN6D94N6*czE3NzIyNjIxMTUkbzQkZzEkdDE3NzIyNjI5MTMkajYwJGwwJGgw" className="block w-full mt-5">
+         <a href="https://charttactix.gumroad.com/l/SmartMoneySecrets" className="block w-full mt-5">
   <button className="w-full bg-[#A6FF00] flex justify-center items-center gap-3 text-black py-1.5 rounded-md font-medium cursor-pointer">
     <FaCartPlus style={{ width: 20 }} />
     Buy
